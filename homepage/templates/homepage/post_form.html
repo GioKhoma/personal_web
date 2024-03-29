@@ -1,0 +1,14 @@
+{% extends 'homepage/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-container">
+    <h3>Post form</h3>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn btn-primary" type="submit" value="Submit Post">
+    </form>
+</div>
+{% endblock content %}
