@@ -10,7 +10,26 @@
         border-radius: 5px;
         padding: 10px;
         width: 180px;
+    }
 
+
+    .my-button {
+        background-color: #d3d3d3;
+        border: none;
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+
+    .my-button:hover {
+        background-color: #b0b0b0;
 
     }
 
@@ -46,10 +65,38 @@
                 </div>
             </div>
         </div>
+        {% empty %}
+            <h3>No posts found...</h3>
         {% endfor %}
-
-
     </div>
+
+
+    <div class="row">
+        {% if posts.has_other_pages %}
+
+            {% if posts.has_previous %}
+                <li class="my-button"><a href="?page={{posts.previous_page_number}}" class="page-link">&laquo;</a></li>
+
+                <li class="my-button"><a href="?page=1" class="page-link">First</a></li>
+            {% endif %}
+            <ul class="pagination">
+                {% for i in posts.paginator.page_range %}
+                    {% if posts.number == i %}
+                        <li class="my-button"><a class="page-link">{{i}}</a></li>
+                    {% else %}
+                        <li class="my-button"><a href="?page={{i}}" class="page-link">{{i}}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if posts.has_next %}
+                    <li class="my-button"><a href="?page={{posts.paginator.num_pages}}" class="page-link">Last</a></li>
+
+                    <li class="my-button"><a href="?page={{posts.next_page_number}}" class="page-link">&raquo;</a></li>
+                {% endif %}
+            </ul>
+        {% endif %}
+    </div>
+
 </div>
 
-{% endblock content%}
+{% endblock content %}

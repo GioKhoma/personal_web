@@ -1,0 +1,56 @@
+{% extends 'homepage/main.html' %}
+{% block content %}
+
+<style type="text/css">
+	html, body{
+		height: 97%;
+	}
+
+	#page-wrapper{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-color: #eaeaea;
+	}
+
+	#success-box{
+		max-width: 800px;
+		height: auto;
+		background-color: #fff;
+		border:1px solid #888;
+		border-radius: 5px;
+		padding: 15px;
+		margin-top: -150px;
+	}
+
+	#success-box p{
+		font-size: 18px;
+	}
+
+    #back-btn{
+        border: 2px solid #333;
+        color: #333;
+        padding: 5px 10px;
+        text-decoration: none;
+		background-color: #ccc;
+		border-radius: 20px;
+    }
+
+    #back-btn:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+</style>
+
+  <div id="page-wrapper">
+	<div id="success-box" class="content-block">
+		<h1>Thanks for reaching out!</h1>
+		<p>Your message was successfully sent. I will do my best to get back to you in a timely manner :)</p>
+		<a id="back-btn" class="btn btn-success" href="{% url 'home' %}">BACK TO HOME PAGE</a>
+	</div>
+</div>
+
+{% endblock content %}

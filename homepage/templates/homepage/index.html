@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
 
-<style>
-	.myimg {
-		width: 50px;
-	}
-</style>
 <html>
 <head>
 	<title>Giorgi Khomasuridze</title>
@@ -102,7 +97,7 @@
 
 				
 				<div class="social-links">
-					<img class="myimg" id="social_img" src="{% static 'images/baku.jpg' %}">
+					<img class="myimg" id="social_img" src="{% static 'images/new.jpg' %}">
 					<h3>Find me on Twitter & Youtube</h3>
 
 					<a target="_blank" href="https://www.youtube.com/c/dennisivy">YouTube: @DennisIvy</a>
@@ -153,7 +148,8 @@
 			<a href=""></a>
 			<h3 style="text-align: center;">Get In Touch</h3>
 
-			<form id="contact-form">
+			<form id="contact-form" method="POST" action="{% url 'send_email' %}">
+				{% csrf_token %}
 				<a name="contact"></a>
 
 				<label>Name</label>
