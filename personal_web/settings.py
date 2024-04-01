@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -43,6 +44,9 @@ INSTALLED_APPS = [
 
     #'crispy_forms',
     'django_filters',
+    'ckeditor',
+    'ckeditor_uploader',
+    'storages',
 ]
 
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -149,10 +153,29 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'giokhomaa@gmail.com'
 EMAIL_HOST_PASSWORD = 'ugtu yaqi bbud vkhs'
 
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+    },
+}
+
+# AWS_QUERYSTRING_AUTH = False
+#
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
+# AWS_ACCESS_KEY_ID = 'AKIAQ3EGWIWW2JS3RUGR'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'giokhoma-personal'
+#
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
 
-
-
-
+#secret key = qpjnbBhcG2VnmvEDClCQ2Qm0Qa7YBWfks8sty2wL
+#key = AKIAQ3EGWIWW2JS3RUGR
 
