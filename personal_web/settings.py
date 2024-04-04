@@ -179,7 +179,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'giokhomaa@gmail.com'
-EMAIL_HOST_PASSWORD = 'ugtu yaqi bbud vkhs'
+EMAIL_HOST_PASSWORD = 'qxwv cddd dbtj yhhy'
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
