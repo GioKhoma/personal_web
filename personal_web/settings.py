@@ -87,13 +87,38 @@ WSGI_APPLICATION = 'personal_web.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+
+# - SQLite database
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+
+# - Postgresl database
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+    "default": {
+
+        "ENGINE": "django.db.backends.postgresql",
+
+        "NAME": "demo_1",
+
+        "USER": "giokhoma",
+
+        "PASSWORD": "Giorgigiorgi",
+
+        "HOST": "database-1.crogcmoiwcrz.eu-north-1.rds.amazonaws.com",
+
+        "PORT": "5432",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -129,7 +154,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
+if DEBUG:
+    STATIC_URL = '/static/'
+else:
+    STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/static-files/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
@@ -163,20 +191,32 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-# AWS_QUERYSTRING_AUTH = False
-#
+AWS_QUERYSTRING_AUTH = False
+
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+STORAGES = {
+    #media file (image)
+    'default': {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage"
+    },
 
-# AWS_ACCESS_KEY_ID = 'AKIAQ3EGWIWW2JS3RUGR'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'giokhoma-personal'
-#
-# AWS_S3_FILE_OVERWRITE = False
-# AWS_DEFAULT_ACL = None
+    # css, js files
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage"
+    }
+}
 
-#secret key = qpjnbBhcG2VnmvEDClCQ2Qm0Qa7YBWfks8sty2wL
-#key = AKIAQ3EGWIWW2JS3RUGR
 
-#giorgiiiiiiii
+AWS_ACCESS_KEY_ID = 'AKIATCKAN43SCGSOHAYA'
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_STORAGE_BUCKET_NAME = 'giokhoma-personal'
+
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+#giorgi
