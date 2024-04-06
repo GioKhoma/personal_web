@@ -29,6 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  'giokhoma-personal-2c92fdbaa747.herokuapp.com/',
+                 'www.giokhoma-personal-2c92fdbaa747.herokuapp.com/',
                  '51.20.255.214',
                  'ec2-51-20-255-214.eu-north-1.compute.amazonaws.com']
 
@@ -217,7 +218,7 @@ AWS_STORAGE_BUCKET_NAME = 'giokhoma-personal'
 # AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 # AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
-# AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
