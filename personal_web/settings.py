@@ -27,11 +27,13 @@ SECRET_KEY = 'django-insecure-r78hkkmq@7v=1*tc^ejrky0dg6%1!@d4s-b))==@k8#h)xa615
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1',
-                 'giokhoma-personal-2c92fdbaa747.herokuapp.com/',
-                 'www.giokhoma-personal-2c92fdbaa747.herokuapp.com/',
-                 '51.20.255.214',
-                 'ec2-51-20-255-214.eu-north-1.compute.amazonaws.com']
+# ALLOWED_HOSTS = ['127.0.0.1',
+#                  'giokhoma-personal-2c92fdbaa747.herokuapp.com/',
+#                  'www.giokhoma-personal-2c92fdbaa747.herokuapp.com/',
+#                  '51.20.255.214',
+#                  'ec2-51-20-255-214.eu-north-1.compute.amazonaws.com']
+
+ALLOWED_HOSTS = []
 
 
 # Application definition
