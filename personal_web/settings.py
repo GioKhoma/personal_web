@@ -27,11 +27,21 @@ SECRET_KEY = 'django-insecure-r78hkkmq@7v=1*tc^ejrky0dg6%1!@d4s-b))==@k8#h)xa615
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['127.0.0.1',
                  'giokhoma-portfolio-82e596ab09a8.herokuapp.com/',
                  'giokhoma-personal-90d0949df3c0.herokuapp.com/',
                  '51.20.255.214',
                  'ec2-51-20-255-214.eu-north-1.compute.amazonaws.com']
+=======
+# ALLOWED_HOSTS = ['127.0.0.1',
+#                  'giokhoma-personal-2c92fdbaa747.herokuapp.com/',
+#                  'www.giokhoma-personal-2c92fdbaa747.herokuapp.com/',
+#                  '51.20.255.214',
+#                  'ec2-51-20-255-214.eu-north-1.compute.amazonaws.com']
+
+ALLOWED_HOSTS = []
+>>>>>>> cd6aede1a2f71d66c9bffa05aad4d0a0030cbe55
 
 
 # Application definition
@@ -158,7 +168,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd6aede1a2f71d66c9bffa05aad4d0a0030cbe55
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
@@ -213,8 +226,11 @@ STORAGES = {
 
 AWS_ACCESS_KEY_ID = 'AKIATCKAN43SCGSOHAYA'
 AWS_SECRET_ACCESS_KEY = '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'
-
 AWS_STORAGE_BUCKET_NAME = 'giokhoma-personal'
+
+# AWS_STORAGE_BUCKET_NAME = os.environ.get('giokhoma-personal')
+# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
