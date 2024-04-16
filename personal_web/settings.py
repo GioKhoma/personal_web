@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-r78hkkmq@7v=1*tc^ejrky0dg6%1!@d4s-b))==@k8#h)xa615
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1',
+                 'giokhoma-portfolio-82e596ab09a8.herokuapp.com/',
                  'giokhoma-personal-90d0949df3c0.herokuapp.com/',
                  '51.20.255.214',
                  'ec2-51-20-255-214.eu-north-1.compute.amazonaws.com']
