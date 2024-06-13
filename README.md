@@ -19,4 +19,4 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/GioKhoma/personal_web.git
