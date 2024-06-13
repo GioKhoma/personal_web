@@ -124,9 +124,9 @@ DATABASES = {
 
         "USER": "giokhoma",
 
-        "PASSWORD": "Giorgigiorgi",
+        "PASSWORD": "123",
 
-        "HOST": "database-1.crogcmoiwcrz.eu-north-1.rds.amazonaws.com",
+        "HOST": "database-789.crogcmoiwcrz.eu-north-231.rds.amazonaws.com",
 
         "PORT": "5432",
     }
@@ -188,7 +188,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'giokhomaa@gmail.com'
-EMAIL_HOST_PASSWORD = 'qxwv cddd dbtj yhhy'
+EMAIL_HOST_PASSWORD = '123'
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
@@ -218,11 +218,11 @@ STORAGES = {
 }
 
 
-AWS_ACCESS_KEY_ID = 'AKIATCKAN43SCGSOHAYA'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = '123'
+AWS_SECRET_ACCESS_KEY = '123'
 AWS_STORAGE_BUCKET_NAME = 'giokhoma-personal'
 
-# AWS_STORAGE_BUCKET_NAME = os.environ.get('giokhoma-personal')
+# AWS_STORAGE_BUCKET_NAME = os.environ.get()
 # AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 # AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
