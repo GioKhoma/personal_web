@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-Welcome to my portfolio website! This project showcases my skills, projects, and contact information. It is built using Django, DRF (Django Rest Framework), Bootstrap, HTML, and CSS.
+Welcome to my portfolio website! This project showcases my skills, projects, and contact information. It is built using Django, Bootstrap, HTML, and CSS.
 
 ## Features
 
