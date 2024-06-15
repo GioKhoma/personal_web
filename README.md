@@ -11,7 +11,7 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 ## Technologies Used
 
 - **Frontend:** HTML, CSS, Bootstrap
-- **Backend:** Django, Django Rest Framework
+- **Backend:** Django
 - **Hosting and Cloud:** AWS (RDS, S3 buckets, EC2), Heroku
 
 ## Installation
